@@ -36,8 +36,8 @@
         </div>
       </div>
       <form onsubmit="handleSignIn(event)" class="space-y-4">
-        <input id="signinEmail" type="email" placeholder="Email" value="example.admin@gmail.com" required class="w-full px-4 py-2 border rounded-md">
-        <input id="signinPassword" type="password" placeholder="Password" value="admin2082" required class="w-full px-4 py-2 border rounded-md">
+        <input id="signinEmail" type="email" placeholder="Email" value="useradmin@example.com" required class="w-full px-4 py-2 border rounded-md">
+        <input id="signinPassword" type="password" placeholder="Password" value="useradmin" required class="w-full px-4 py-2 border rounded-md">
         <button type="submit" class="w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700">Sign In</button>
         <p class="text-xs text-center text-gray-500 mt-3">Default: <strong>example@gmail.com</strong> / <strong>example123</strong></p>
       </form>
@@ -675,7 +675,7 @@
   <script>
     // DATA
     let users = JSON.parse(localStorage.getItem("users") || JSON.stringify([
-      { email: "example.admin@gmail.com", password: "admin2082", name: "Ranjit Singh", role: "admin" }
+      { email: "useradmin@example.com", password: "useradmin", name: "Ranjit Singh", role: "admin" }
     ]));
     let members = JSON.parse(localStorage.getItem("members") || "[]");
     let savings = JSON.parse(localStorage.getItem("savings") || "[]");
@@ -938,7 +938,7 @@
           <td class="p-3">${u.email}</td>
           <td class="p-3"><span class="px-2 py-1 rounded-full text-xs ${u.role === 'admin' ? 'bg-purple-100 text-purple-800' : 'bg-gray-100 text-gray-800'}">${u.role}</span></td>
           <td class="p-3">
-            ${u.email !== 'example.admin@gmail.com' ? `<button onclick="deleteUser('${u.email}')" class="text-red-600 hover:underline text-xs">Delete</button>` : ''}
+            ${u.email !== 'useradmin@example.com' ? `<button onclick="deleteUser('${u.email}')" class="text-red-600 hover:underline text-xs">Delete</button>` : ''}
           </td>
         </tr>
       `).join('');
@@ -1660,3 +1660,4 @@
 </body>
 
 </html>
+
